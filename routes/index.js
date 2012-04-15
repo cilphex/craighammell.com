@@ -25,10 +25,12 @@ function render(req, res, path, options) {
 }
 
 exports.index = function(req, res) {
-  render(req, res, 'index'); // {layout: false}
+    render(req, res, 'index'); // {layout: false}
 };
 
-
+exports.where = function(req, res) {
+    render(req, res, 'where');
+};
 
 
 

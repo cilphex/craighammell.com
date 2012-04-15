@@ -4,6 +4,7 @@ var routes = require('../routes');
 
 var paths_to_routes = {
     '/': routes.index,
+    '/where': routes.where,
     
     // Sandbox
     '/sandbox': routes.sandbox,
