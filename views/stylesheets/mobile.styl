@@ -56,6 +56,7 @@ h2
     margin-top 40px
     font-size 25px
     line-height 35px
+    -webkit-tap-highlight-color #f00
 
 h3
     margin-top 40px
@@ -72,13 +73,21 @@ ul
     padding 0
     list-style none
 
-ul li
-    padding 0 10px
-    line-height 40px
-    border-bottom 1px solid #eee
+    li
+        padding 0 10px
+        line-height 40px
+        border-bottom 1px solid #eee
 
+    &.links li
+        padding 0
+    
+        a
+            display block
+            padding 0 10px
 
-
+            &:hover
+                color #fff
+                background #0099fc
 
 
 
