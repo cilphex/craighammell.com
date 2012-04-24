@@ -4,12 +4,19 @@ html(lang="en")
         title Craig Hammell
         meta(name="description", content="Get square.")
         meta(name="keywords", content="craig hammell")
+        link(rel="icon", href="/images/favicon.png")
+        link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Crushed")
         link(rel="stylesheet", type="text/css", href="/stylesheets/main.css")
 
     body
-        !{body}
+        div#content
+            div.plusone.
+                <g:plusone size="small" annotation="inline" width="120"></g:plusone>
+            !{body}
 
     footer
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+        script(type="text/javascript", src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCfaETX_rz5bkYyqZ2V0gvVwGPEyasA_oU&sensor=false")
         script(src="/javascript/main.js")
+        include ../components/plusone.html
         include ../components/analytics.html
