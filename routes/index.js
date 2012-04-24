@@ -32,6 +32,10 @@ exports.where = function(req, res) {
     render(req, res, 'where');
 };
 
+exports.drawings = function(req, res) {
+    render(req, res, 'drawings');
+};
+
 
 
 
