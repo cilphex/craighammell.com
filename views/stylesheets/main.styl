@@ -22,6 +22,15 @@ box-flex()
 
 // Styles
 
+@font-face
+    font-family 'BebasNeueuRegular'
+    font-style normal
+    font-weight normal
+    src local('BebasNeueuRegular')
+    src url('http://assets.craighammell.com/fonts/BebasNeue-webfont.eot') format('embedded-opentype')
+    src url('http://assets.craighammell.com/fonts/BebasNeue-webfont.woff') format('woff')
+    src url('http://assets.craighammell.com/fonts/BebasNeue-webfont.ttf') format('truetype')
+
 html, body
     margin 0
     padding 0
@@ -42,16 +51,18 @@ a:hover, a:active
     color #679ddf
 
 h1
-    margin 20px 0 10px
-    font-family 'Crushed', sans-serif
-    font-size 30px
-    line-height 30px
+    margin 20px 0 0
+    font-family 'BebasNeueuRegular', sans-serif
+    font-size 40px
+    font-weight normal
+    line-height 40px
 
 h2, h3
-    margin 30px 0 10px
-    font-family 'Crushed', sans-serif
-    font-size 22px
-    line-height 22px
+    margin 30px 0 0
+    font-family 'BebasNeueuRegular', sans-serif
+    font-size 28px
+    font-weight normal
+    line-height 28px
 
 h3
     font-size 15px
@@ -90,14 +101,15 @@ div#map_canvas
 
 // Drawings
 
-div.drawings div
-    margin 0 0 100px
-    text-align center
+div.drawings
 
-div.drawings div img
-    max-width 100%
-    max-height 600px
-    box-shadow 0 8px 55px rgba(0,0,0,0.15)
+    div
+        margin 0 0 120px
+        text-align center
 
-div.drawings p
-    text-align center
+        img
+            max-width 100%
+            max-height 800px
+            box-shadow 0 8px 55px rgba(0,0,0,0.15)
+    p
+        text-align center
