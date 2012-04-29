@@ -22,6 +22,15 @@ box-flex()
 
 // Styles
 
+@font-face
+    font-family 'BebasNeueuRegular'
+    font-style normal
+    font-weight normal
+    src local('BebasNeueuRegular')
+    src url('http://assets.craighammell.com/fonts/BebasNeue-webfont.eot') format('embedded-opentype')
+    src url('http://assets.craighammell.com/fonts/BebasNeue-webfont.woff') format('woff')
+    src url('http://assets.craighammell.com/fonts/BebasNeue-webfont.ttf') format('truetype')
+
 html, body
     margin 0
     padding 0
@@ -47,10 +56,14 @@ a:hover, a:active
 h1, h2, h3
     margin 0
     padding 0 10px
-    font-family 'Crushed', sans-serif
-    font-size 40px    
-    line-height 50px
+    font-family 'BebasNeueuRegular', sans-serif
+    font-size 40px
+    font-weight normal
+    line-height 51px
     border-bottom 1px solid #ccc
+
+h1
+    margin-top 5px
 
 h2
     margin-top 40px
