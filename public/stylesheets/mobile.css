@@ -14,3 +14,6 @@ ul li{padding:0 10px;line-height:40px;border-bottom:1px solid #eee}
 ul.links li{padding:0;}
 ul.links li a{display:block;padding:0 10px;}
 ul.links li a:hover{color:#fff;background:#0099fc}
+div.drawings div{margin:20px 0 50px;text-align:center;}
+div.drawings div img{max-width:94%;max-height:380px;-webkit-box-shadow:0 8px 55px rgba(0,0,0,0.15);-moz-box-shadow:0 8px 55px rgba(0,0,0,0.15);box-shadow:0 8px 55px rgba(0,0,0,0.15)}
+div.drawings p{text-align:center}
