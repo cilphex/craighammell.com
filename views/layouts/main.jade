@@ -13,8 +13,19 @@ html(lang="en")
                 <g:plusone size="small" annotation="inline" width="120"></g:plusone>
             !{body}
 
+        div#imagemagnify(style="display: none;")
+            div.bar
+                div.inner
+                    p.title.
+                        Efflorescence
+                    p.description.
+                        This is a drawing I made.  The dimensions are X by Y.
+            div.image
+                div.loader
+
     footer
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js")
         script(type="text/javascript", src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCfaETX_rz5bkYyqZ2V0gvVwGPEyasA_oU&sensor=false")
         script(src="/javascripts/main.js")
         include ../components/plusone.html
