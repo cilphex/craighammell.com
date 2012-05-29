@@ -73,8 +73,10 @@ var ImageMagnifier = {
         // Observe black background for click to close
         $(this.image_area).click(this.close.bind(this));
         
-        // Observe scroll for zoom
-        $(this.image_area).bind('mousewheel', this.zoom.bind(this));
+        // Observe mousewheel to prevent scroll
+        $(this.panel).bind('mousewheel', function(event) {
+            event.preventDefault();
+        }.bind(this));
     },
     show: function(img_url, event) {
         this.is_open = true;
@@ -86,6 +88,7 @@ var ImageMagnifier = {
         $(img)
             .load(this.show_cb.bind(this, img))
             .error(this.show_error.bind(this))
+            .bind('mousewheel', this.zoom.bind(this))
             .attr('src', img_url);
     },
     show_cb: function(img, event) {
@@ -132,7 +135,6 @@ var ImageMagnifier = {
         else {
             console.log('zoom out');
         }
-        event.preventDefault();
     },
     close: function() {
         this.is_open = false;
