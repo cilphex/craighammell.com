@@ -38,6 +38,7 @@ html, body
 body
     font-family Helvetica, Arial, sans-serif
     font-size 13px
+    line-height 20px
     color #555
 
 a
@@ -86,13 +87,13 @@ div#content div.plusone
 
 div#content p
     margin 0 0 20px
-    line-height 20px
+    line-height 25px
 
 div#content ul
-    margin 0 0 20px
+    margin 0 0 20px 15px
     padding 0
-    line-height 20px
-    list-style none
+    line-height 25px
+    color #bbb
 
 div#map_canvas
     width 100%
@@ -113,3 +114,65 @@ div.drawings
             box-shadow 0 8px 55px rgba(0,0,0,0.15)
     p
         text-align center
+
+// Image magnify
+
+div#imagemagnify
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background rgba(0,0,0,0.85)
+
+    div.bar
+        background rgb(0,0,0)
+        border-bottom 1px solid rgba(255,255,255,0.2)
+
+        .inner
+            margin 0 auto
+            padding 15px 0
+            width 800px
+
+        p
+            color #fff
+
+        p.title
+            margin 0
+            font-family 'BebasNeueuRegular', sans-serif
+            font-size 40px
+            font-weight normal
+            line-height 40px
+
+        p.description
+            margin 0
+            font-size 13px
+
+    div.image
+        position fixed
+        top 90px
+        left 0
+        right 0
+        bottom 0
+        overflow hidden
+
+        div.loader
+            position fixed
+            margin -32px 0 0 -57px
+            top 50%
+            left 50%
+            width 110px
+            height 61px
+            // image is 31x31px
+            background #000 url(/images/loaders/white-on-black.gif) center center no-repeat
+            border-radius 32px
+            border 2px solid rgba(255,255,255,0.2)
+
+        img
+            position absolute
+
+
+
+
+
+
