@@ -36,6 +36,10 @@ exports.drawings = function(req, res) {
     render(req, res, 'drawings');
 };
 
+exports.donate = function(req, res) {
+    render(req, res, 'donate');
+};
+
 
 
 

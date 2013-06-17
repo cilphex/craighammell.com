@@ -6,6 +6,7 @@ var paths_to_routes = {
     '/': routes.index,
     '/where': routes.where,
     '/drawings': routes.drawings,
+    '/donate': routes.donate,
     
     // Sandbox
     '/sandbox': routes.sandbox,
