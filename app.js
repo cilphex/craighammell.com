@@ -46,5 +46,5 @@ app.configure('production', function(){
 
 router.setupRoutes(app);
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 6000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
