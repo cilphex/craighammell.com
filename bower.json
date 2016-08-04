@@ -1,0 +1,26 @@
+{
+  "name": "craighammell.com",
+  "homepage": "https://github.com/cilphex/craighammell.com",
+  "authors": [
+    "Craig Hammell <cilphex@gmail.com>"
+  ],
+  "description": "My personal website",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "craig",
+    "hammell"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.6.1"
+  }
+}

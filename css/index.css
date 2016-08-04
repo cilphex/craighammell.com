@@ -1,0 +1,89 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  color: #555;
+}
+
+body,
+input {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  /*-webkit-font-smoothing: antialiased;*/
+}
+
+a {
+  text-decoration: none;
+  color: #4f99ce;
+}
+
+a:hover,
+a:active {
+  margin: -3px -6px;
+  padding: 3px 6px;
+  color: #fff;
+  background-color: #f0c;
+  border-radius: 3px;
+}
+
+div.sections {
+  display: flex;
+}
+
+div.sections section {
+  margin-right: 30px;
+}
+
+div.sections section:last-of-type {
+  margin-right: 0;
+  flex-grow: 1; /* Take up the remainder of the space */
+}
+
+.bio-picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+}
+
+h1 {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-size: 13px;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+div.dl p span:first-child {
+  display: inline-block;
+  width: 160px;
+}
+
+div.dl p span:last-child {
+  color: #aaa;
+}
+
+
+@media (max-width: 640px) {
+  body {
+    padding: 25px;
+  }
+  div.sections {
+    flex-direction: column;
+  }
+  div.sections section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  div.sections section:first-child {
+    text-align: center;
+  }
+}
