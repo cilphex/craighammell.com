@@ -38,7 +38,11 @@ div.sections section {
   margin-right: 30px;
 }
 
-div.sections section:last-of-type {
+div.sections section.description {
+  min-width: 300px;
+}
+
+div.sections section.images {
   margin-right: 0;
   flex-grow: 1; /* Take up the remainder of the space */
 }

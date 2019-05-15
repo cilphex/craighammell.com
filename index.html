@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="html/components/image-list-set.html">
+    <link rel="import" href="html/components/image-list.html">
     <script src="js/google-analytics.js"></script>
   </head>
   <body>
@@ -15,24 +17,26 @@
         <img class="bio-picture" src="/images/photos/craig-hammell.jpg">
       </section>
 
-      <section>
+      <section class="description">
         <h1>Craig Hammell</h1>
-        <p>I'm a web developer based in San Francisco.</p>
+        <p>I'm a software engineer based in San Francisco.</p>
         <br>
 
-        <p><a href="http://github.com/cilphex">GitHub</a></p>
-        <p><a href="http://linkedin.com/in/hammell">LinkedIn</a></p>
+        <p><a href="https://github.com/cilphex">GitHub</a></p>
+        <p><a href="https://www.linkedin.com/in/hammell">LinkedIn</a></p>
+        <p><a href="https://keybase.io/craig">Keybase</a></p>
         <br>
 
-        <!-- <p><a href="#">Drawings</a></p>
-        <p><a href="#">Pictures</a></p>
-        <br> -->
+        <p><a href="http://instagram.com/cilphex">Instagram</a></p>
+        <p><a href="javascript:document.querySelector('#images').show('photos')">Photos</a></p>
+        <p><a href="javascript:document.querySelector('#images').show('drawings')">Drawings</a></p>
+        <br>
 
         <h3>History</h3>
         <div class="dl">
           <p>
             <span><a href="https://www.coinbase.com">Coinbase</a></span>
-            <span>`13 - Current</span>
+            <span>`13 - 19</span>
           <p>
           <p>
             <span><a href="http://www.okcupid.com">OkCupid</a></span>
@@ -45,13 +49,6 @@
         <div class="dl">
           <p>
             <span>
-              <script>document.writeln(['<a href="mailto:','crai','g@','coinba','se.co','m','">'].join(''))</script>
-              craig@coinbase</a>
-            </span>
-            <span>Work</span>
-          <p>
-          <p>
-            <span>
               <script>document.writeln(['<a href="mailto:','c','ilphe','x@','gmai','l.','c','om','">'].join(''))</script>
               cilphex@gmail</a>
             </span>
@@ -60,8 +57,34 @@
         </div>
       </section>
 
-      <section>
-        <!-- Media goes here -->
+      <section class="images">
+        <image-list-set id="images">
+          <image-list id="drawings">
+            <img data-src="/images/drawings/01.png">
+            <img data-src="/images/drawings/02.png">
+            <img data-src="/images/drawings/03.png">
+            <img data-src="/images/drawings/04.png">
+            <img data-src="/images/drawings/05.png">
+            <img data-src="/images/drawings/06.png">
+            <img data-src="/images/drawings/07.png">
+            <img data-src="/images/drawings/08.png">
+            <img data-src="/images/drawings/09.png">
+            <img data-src="/images/drawings/10.png">
+            <img data-src="/images/drawings/11.png">
+            <img data-src="/images/drawings/12.png">
+            <img data-src="/images/drawings/14.png">
+          </image-list>
+
+          <image-list id="photos">
+            <img data-src="/images/photos/07.jpg">
+            <img data-src="/images/photos/06.jpg">
+            <img data-src="/images/photos/05.jpg">
+            <img data-src="/images/photos/04.jpg">
+            <img data-src="/images/photos/03.jpg">
+            <img data-src="/images/photos/02.jpg">
+            <img data-src="/images/photos/01.png">
+          </image-list>
+        </image-lists>
       </section>
     </div>
   </body>
