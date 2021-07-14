@@ -15,7 +15,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-152601513-1');
     </script>
   </head>
@@ -27,7 +26,10 @@
 
       <section class="description">
         <h1>Craig Hammell</h1>
-        <p>I'm a software engineer based in Austin, TX.</p>
+        <div class="sub-head">
+          <p>Software engineer</p>
+          <p class="location">Austin, TX</p>
+        </div>
         <br>
 
         <p><a href="https://github.com/cilphex">GitHub</a></p>
@@ -37,8 +39,8 @@
 
         <h3>Stuff</h3>
         <p><a href="http://bitcoin.craighammell.com">Bitcoin Charts</a></p>
-        <p><a href="javascript:document.querySelector('#images').show('photos')">Photos</a></p>
-        <p><a href="javascript:document.querySelector('#images').show('drawings')">Drawings</a></p>
+        <p><a href="javascript:showPhotos()">Photos</a></p>
+        <p><a href="javascript:showDrawings()">Drawings</a></p>
         <br>
 
         <h3>Social</h3>
@@ -72,39 +74,48 @@
       </section>
 
       <section class="images">
-        <image-list-set id="images">
-          <image-list id="drawings">
-            <img data-src="/images/drawings/15.jpg">
-            <img data-src="/images/drawings/16.jpg">
-            <img data-src="/images/drawings/09.png"> <!-- city streets & magazines -->
-            <img data-src="/images/drawings/06.png">
-            <img data-src="/images/drawings/05.png">
-            <img data-src="/images/drawings/01.png">
-            <img data-src="/images/drawings/02.png">
-            <img data-src="/images/drawings/03.png">
-            <img data-src="/images/drawings/13.png">
-            <img data-src="/images/drawings/04.png">
-            <img data-src="/images/drawings/07.png">
-            <img data-src="/images/drawings/08.png">
-            <img data-src="/images/drawings/10.png">
-            <img data-src="/images/drawings/11.png">
-            <img data-src="/images/drawings/12.png">
-            <img data-src="/images/drawings/14.png">
-            <img data-src="/images/drawings/17.jpg">
-            <img data-src="/images/drawings/18.jpg">
-          </image-list>
+        <div id="drawings" hidden>
+          <img src="/images/drawings/15.jpg">
+          <img src="/images/drawings/16.jpg">
+          <img src="/images/drawings/09.png"> <!-- city streets & magazines -->
+          <img src="/images/drawings/06.png">
+          <img src="/images/drawings/05.png">
+          <img src="/images/drawings/01.png">
+          <img src="/images/drawings/02.png">
+          <img src="/images/drawings/03.png">
+          <img src="/images/drawings/13.png">
+          <img src="/images/drawings/04.png">
+          <img src="/images/drawings/07.png">
+          <img src="/images/drawings/08.png">
+          <img src="/images/drawings/10.png">
+          <img src="/images/drawings/11.png">
+          <img src="/images/drawings/12.png">
+          <img src="/images/drawings/14.png">
+          <img src="/images/drawings/17.jpg">
+          <img src="/images/drawings/18.jpg">
+        </div>
 
-          <image-list id="photos">
-            <img data-src="/images/photos/07.jpg">
-            <img data-src="/images/photos/06.jpg">
-            <img data-src="/images/photos/05.jpg">
-            <img data-src="/images/photos/04.jpg">
-            <img data-src="/images/photos/03.jpg">
-            <img data-src="/images/photos/02.jpg">
-            <img data-src="/images/photos/01.png">
-          </image-list>
-        </image-lists>
+        <div id="photos" hidden>
+          <img src="/images/photos/07.jpg">
+          <img src="/images/photos/06.jpg">
+          <img src="/images/photos/05.jpg">
+          <img src="/images/photos/04.jpg">
+          <img src="/images/photos/03.jpg">
+          <img src="/images/photos/02.jpg">
+          <img src="/images/photos/01.png">
+        </div>
       </section>
     </div>
   </body>
+
+  <script>
+    function showPhotos() {
+      document.querySelector('#photos').removeAttribute('hidden');
+      document.querySelector('#drawings').setAttribute('hidden', '');
+    }
+    function showDrawings() {
+      document.querySelector('#drawings').removeAttribute('hidden');
+      document.querySelector('#photos').setAttribute('hidden', '');
+    }
+  </script>
 </html>
