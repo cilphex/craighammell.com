@@ -12,7 +12,7 @@ body {
 body,
 input {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   /*-webkit-font-smoothing: antialiased;*/
 }
 
@@ -47,9 +47,24 @@ div.sections section.images {
   flex-grow: 1; /* Take up the remainder of the space */
 }
 
+div.sections section.images > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div.sections section.images > div[hidden] {
+  display: none;
+}
+
+div.sections section.images > div img {
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
 .bio-picture {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   border-radius: 100px;
 }
 
@@ -59,11 +74,23 @@ h1 {
 }
 
 h2, h3 {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 h3 {
   font-weight: normal;
+}
+
+p {
+  margin: 10px 0;
+}
+
+div.sub-head p {
+  margin: 1px 0;
+}
+
+div.sub-head p.location {
+  color: #888;
 }
 
 div.dl p span:first-child {
